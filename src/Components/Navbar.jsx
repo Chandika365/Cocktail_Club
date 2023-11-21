@@ -21,7 +21,7 @@ export default function Navbar() {
                 <div className='flex lg:flex-1'>
                     <Link to='/' className='-m-1.5 p-1.5'>
                         <div className='text-lg font-semibold leading-6 text-green-500 mb-0'>
-                            Cocktail Shop
+                            Cocktail Club
                         </div>
                     </Link>
                 </div>
@@ -68,7 +68,7 @@ export default function Navbar() {
                     <div className='flex items-center justify-between'>
                         <Link to='/' className='-m-1.5 p-1.5'>
                             <div className='text-lg font-semibold leading-6 text-gray-900'>
-                                Cocktail Shop
+                                Cocktail Club
                             </div>
                         </Link>
                         <button
