@@ -1,4 +1,13 @@
 <<<<<<< HEAD
+
+![Home_1](https://github.com/Chandika365/Cocktail_House/blob/main/assets/Home_1.png)
+![Home_2](https://github.com/Chandika365/Cocktail_House/blob/main/assets/Home_2.png)
+![Search_1](https://github.com/Chandika365/Cocktail_House/blob/main/assets/Search_1.png)
+![Search_2](https://github.com/Chandika365/Cocktail_House/blob/main/assets/Search_2.png)
+![Search_3](https://github.com/Chandika365/Cocktail_House/blob/main/assets/Search_3.png)
+![Favorite_1](https://github.com/Chandika365/Cocktail_House/blob/main/assets/Favorite_1.png)
+![Favorite_2](https://github.com/Chandika365/Cocktail_House/blob/main/assets/Favorite_2.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
