@@ -20,7 +20,7 @@ export default function Navbar() {
             <nav className='flex items-center justify-between p-6 lg:px-8' aria-label='Global'>
                 <div className='flex lg:flex-1'>
                     <Link to='/' className='-m-1.5 p-1.5'>
-                        <div className='text-lg font-semibold leading-6 text-gray-900 mb-0'>
+                        <div className='text-lg font-semibold leading-6 text-green-500 mb-0'>
                             Cocktail Shop
                         </div>
                     </Link>
