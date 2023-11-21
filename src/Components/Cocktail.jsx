@@ -1,20 +1,27 @@
 import React, { useEffect, useState } from "react";
-import { UseStateValue } from "./StateProvider";
+import { useStateValue } from "./StateProvider";
 
 
 
 function getRandomRating() {
   return Math.floor(Math.random() * 4) + 1;
 }
+
+function renderStars(count) {
+  return Array.from({ length: count }, (_, i) => <span key={i}>🌟</span>);
+}
+
 function getRandomPrice() {
   return Math.floor(Math.random() * (50 - 25) + 25).toFixed(2);
 }
 
+
 function Cocktail() {
-  const [{ favorite }, dispatch] = UseStateValue()
+  const [{ favorite }, dispatch] = useStateValue()
   const [cocktailData, setCocktailData] = useState(null)
   const [displayedRating, setDisplayedRating] = useState(0)
   const [displayedPrice, setDisplayedPrice] = useState(0)
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchCocktail = async () => {
@@ -24,8 +31,10 @@ function Cocktail() {
         setCocktailData(data.drinks[0])
         setDisplayedPrice(getRandomPrice())
         setDisplayedRating(getRandomRating())
+        setLoading(false)
       } catch (error) {
         console.error('Error Fetching Cocktails :', error)
+        setLoading(false)
       }
     }
     fetchCocktail();
@@ -51,9 +60,10 @@ function Cocktail() {
   }
   return (
     <div>
-      {cocktailData ? (
-        <>
-          {/* new aded with styles */}
+      {loading ? (
+        <p className="mx-4 my-4 bg-green-200">Loading...</p>
+      ) : (
+        cocktailData && (
           <div class="relative flex w-full max-w-[20rem] flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg">
             <div class="relative mx-4 mt-4 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40">
               <img src={cocktailData.strDrinkThumb} alt={cocktailData.strDrink} />
@@ -65,9 +75,7 @@ function Cocktail() {
                 </h5>
                 <p class="flex items-center gap-1.5 font-sans text-base font-normal leading-relaxed text-blue-gray-900 antialiased">
 
-                  {[...Array(displayedRating)].map((_, i) => (
-                    <p key={1} className='-mt-0.5 h-5 w-5'>🌟</p>
-                  ))}
+                  {renderStars(displayedRating)}
                   <path
                     fill-rule="evenodd"
                     d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
@@ -96,10 +104,10 @@ function Cocktail() {
               </button>
             </div>
           </div>
-        </>
-      ) : (
-        <p className="mx-4 my-4 bg-green-200">Loading...</p>
-      )}
+        )
+      )
+
+      }
     </div>
   )
 }

@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import { UseStateValue } from './StateProvider';
+import { useStateValue } from './StateProvider';
 
 function FavoriteCocktail({ id, image, title, category, price, rating }) {
-const [{ favorite }, dispatch] = UseStateValue();
+const [{ favorite }, dispatch] = useStateValue();
 
     const removeFromFavorite = () =>{
         dispatch({
