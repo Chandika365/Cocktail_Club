@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { StateProvider, StateContext, useStateValue } from './StateProvider';
+import { StateProvider, StateContext, useStateValue } from '../Components/StateProvider';
 
 // Test 1: Context Creation
 test('StateContext is created successfully', () => {

@@ -28,7 +28,7 @@ const Reducer = (state, action) => {
                 newFavorite.splice(index, 1);
             } else {
                 console.warn(
-                    "cant remove product (id: ${section.id}) as its not in basket!"
+                    "cant remove product its not in basket!"
                 )
             }
             return {

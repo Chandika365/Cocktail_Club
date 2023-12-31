@@ -1,5 +1,5 @@
 import { render, fireEvent, waitFor } from '@testing-library/react';
-import Cocktail from './Cocktail';
+import Cocktail from '../Components/Cocktail';
 
 // Mocking the fetch API
 global.fetch = jest.fn(() =>

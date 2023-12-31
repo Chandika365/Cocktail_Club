@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react';
-import Home from './Home';
+import Home from '../Components/Home';
 
 // Mocking the fetch API
 global.fetch = jest.fn(() =>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import Favorite from './Favorite';
-import { StateProvider } from './StateProvider'; // Mock or provide a StateProvider context
+import Favorite from '../Components/Favorite';
+import { StateProvider } from '../Components/StateProvider'; // Mock or provide a StateProvider context
 
 describe('Favorite Component', () => {
   const mockState = {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, fireEvent, screen, waitFor } from '@testing-library/react';
-import Search from './Search';
-import { StateProvider } from './StateProvider'; 
+import Search from '../Components/Search';
+import { StateProvider } from '../Components/StateProvider'; 
 
 describe('Search Component', () => {
   it('updates search term on input change', () => {

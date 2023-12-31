@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import Subtotal from './Subtotal';
-import { StateProvider } from './StateProvider'; 
+import Subtotal from '../Components/Subtotal';
+import { StateProvider } from '../Components/StateProvider'; 
 
 describe('Subtotal Component', () => {
   it('renders Subtotal component without crashing', () => {

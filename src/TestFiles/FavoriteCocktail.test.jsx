@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, fireEvent, screen } from '@testing-library/react';
-import FavoriteCocktail from './FavoriteCocktail';
-import { StateProvider } from './StateProvider'; 
+import FavoriteCocktail from '../Components/FavoriteCocktail';
+import { StateProvider } from '../Components/StateProvider'; 
 
 describe('FavoriteCocktail Component', () => {
   const mockCocktailData = {

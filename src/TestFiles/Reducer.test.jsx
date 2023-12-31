@@ -1,4 +1,4 @@
-import Reducer, { initialState, getFavoriteTotal } from './Reducer';
+import Reducer, { initialState, getFavoriteTotal } from '../Components/Reducer';
 
 describe('Reducer Function', () => {
   it('adds an item to favorites', () => {
